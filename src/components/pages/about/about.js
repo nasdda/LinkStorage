@@ -10,7 +10,7 @@ const about = (props) => {
       <div className="inner-content">
         <h2 className="text-content">
           This site is a collection of links to articles, videos, websites, etc.
-          which I find helpful and/or important.
+          that I found helpful and/or important.
           <br />
           Feel free to look around and see if there are any links that interests
           you

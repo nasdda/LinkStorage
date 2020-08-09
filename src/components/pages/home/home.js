@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import { TextField } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
+import TagSelector from './tags/tag_selector/tag_selector'
+
 import "./home.css";
 
 const useStyles = makeStyles((theme) => ({
@@ -21,7 +23,7 @@ function Home(props) {
 
   const searchSubmitHandler = (event) => {
     event.preventDefault();
-    console.log(searchValue)
+    console.log(searchValue);
   };
 
   const searchChangeHandler = (event) => {
@@ -41,9 +43,10 @@ function Home(props) {
           label="Search"
           value={searchValue}
           onChange={searchChangeHandler}
-          style={{ width: "500px" }}
+          style={{ width: "700px" }}
         />
       </form>
+      <TagSelector />
     </div>
   );
 }

@@ -1,0 +1,15 @@
+.tag-selector {
+  display: flex;
+  flex-wrap: wrap;
+  height: fit-content;
+  width: 800px;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 800px) {
+  .tag-selector {
+    width: 500px;
+  }
+}

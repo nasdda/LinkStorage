@@ -1,0 +1,16 @@
+.tag {
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  text-align: center;
+  width: fit-content;
+  height: fit-content;
+  padding: 5 10px 5 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.tag:hover{
+    cursor: pointer;
+}
