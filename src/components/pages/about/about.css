@@ -19,3 +19,9 @@
         width: 500px;
     }
 }
+
+@media(max-width: 550px){
+    .text-content{
+        width: 400px;
+    }
+}

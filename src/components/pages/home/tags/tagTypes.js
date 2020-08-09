@@ -9,3 +9,5 @@ export const PYTHON = 8
 export const REACTJS = 9
 export const SITE = 10
 export const VIDEO = 11
+export const KOTLIN = 12
+export const DATABASE = 13

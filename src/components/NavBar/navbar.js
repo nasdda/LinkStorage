@@ -41,7 +41,7 @@ export default function SimpleTabs() {
   return (
     <div className={classes.root}>
       <ThemeProvider theme={theme}>
-        <AppBar position="fixed">
+        <AppBar position="absolute">
           <Tabs
             value={value}
             onChange={handleChange}

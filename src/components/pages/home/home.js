@@ -10,9 +10,14 @@ import "./home.css";
 const useStyles = makeStyles((theme) => ({
   root: {
     "& > *": {
-      margin: theme.spacing(1), 
-      width: "25ch"
+      display: 'flex',
+      width: "50vw"
     },
+    textField: {
+      marginLeft: theme.spacing(1),
+      marginRight: theme.spacing(1),
+      width: '25ch',
+    }
   },
 }));
 
@@ -41,9 +46,11 @@ function Home(props) {
         <TextField
           id="standard-basic"
           label="Search"
+          className={classes.textField}
           value={searchValue}
           onChange={searchChangeHandler}
-          style={{ width: "400px" }}
+          margin="normal"
+          fullWidth
         />
       </form>
       <TagSelector />
