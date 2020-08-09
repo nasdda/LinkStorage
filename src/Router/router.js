@@ -8,7 +8,7 @@ const AppRouter = () => (
   <BrowserRouter>
     <div>
       <NavBar />
-      <div style={{ marginTop: "80px" }}>
+      <div style={{ marginTop: "60px" }}>
         <Switch>
           <Route path="/" component={Home} exact />
           <Route path="/about" component={About} />

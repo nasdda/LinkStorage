@@ -1,0 +1,11 @@
+export const ALGORITHM = 1
+export const ARTICLE = 2
+export const CPP = 3
+export const JAVA = 4
+export const JAVASCRIPT = 5
+export const LEETCODE = 6
+export const NODEJS = 7
+export const PYTHON = 8
+export const REACTJS = 9
+export const SITE = 10
+export const VIDEO = 11

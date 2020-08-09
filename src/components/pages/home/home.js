@@ -10,8 +10,8 @@ import "./home.css";
 const useStyles = makeStyles((theme) => ({
   root: {
     "& > *": {
-      margin: theme.spacing(1),
-      width: "25ch",
+      margin: theme.spacing(1), 
+      width: "25ch"
     },
   },
 }));
@@ -43,7 +43,7 @@ function Home(props) {
           label="Search"
           value={searchValue}
           onChange={searchChangeHandler}
-          style={{ width: "700px" }}
+          style={{ width: "400px" }}
         />
       </form>
       <TagSelector />
