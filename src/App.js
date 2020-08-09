@@ -1,11 +1,11 @@
 import React from 'react';
-import NavBar from './components/NavBar/navbar'
+import AppRouter from './Router/router'
 import './App.css';
 
 function App() {
   return (
     <React.Fragment>
-      <NavBar />
+      <AppRouter />
     </React.Fragment>
   );
 }
