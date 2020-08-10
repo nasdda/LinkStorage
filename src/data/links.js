@@ -92,6 +92,20 @@ const data = [
         image: site,
         tags: [types.REACTJS, types.SITE],
         link: "https://react-redux.js.org/"
+    },
+    {
+        title: "Android Development Documentary",
+        description: "Documentations of various Android app concepts. Helpful to lookup and explore this documentation when stuck on creating your Android app, as it has nearly all the information you need.",
+        image: site,
+        tags: [types.KOTLIN, types.JAVA, types.SITE],
+        link: "https://developer.android.com/docs"
+    },
+    {
+        title: "Jupyter",
+        description: "A open-source web application you can use to code in python. The Jupyter notebook has very neat structure and is perfect for testing and playing with Python code, as well as creating interactive Python notes.",
+        image: tool,
+        tags: [types.PYTHON, types.TOOL],
+        link: "https://jupyter.org/"
     }
 ]
 

@@ -12,11 +12,14 @@ function LinkCards(props) {
     useEffect(() => {
         if (props.rendered) {
             setDisplayCols(props.displayCols)
-            setLoading(false)
         } else {
+            setLoading(true)
             props.renderLinks()
         }
-    }, [props.rendered])
+        return () => {
+            setLoading(false)
+        }
+    }, [props, props.rendered, displayCols])
 
     return (
         <div className="outter">

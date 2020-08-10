@@ -28,13 +28,6 @@ const useStyles = makeStyles((theme) => ({
 
 function Home(props) {
   const classes = useStyles();
-  const searchSubmitHandler = (event) => {
-    event.preventDefault();
-  };
-
-  const searchChangeHandler = (event) => {
-    props.onSearchChange(event);
-  };
 
   return (
     <div className="contents">
@@ -42,14 +35,17 @@ function Home(props) {
         className={classes.root}
         noValidate
         autoComplete="off"
-        onSubmit={(event) => searchSubmitHandler(event)}
+        onSubmit={event => {
+          event.preventDefault()
+          props.searchSubmitHandler()
+        }}
       >
         <TextField
           id="standard-basic"
           label="Search"
           className={classes.textField}
           value={props.searchValue}
-          onChange={searchChangeHandler}
+          onChange={props.onSearchChange}
           margin="normal"
           fullWidth
         />
@@ -68,7 +64,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    onSearchChange: event => dispatch({ type: "SEARCH_CHANGE", event: event })
+    onSearchChange: event => dispatch({ type: "SEARCH_CHANGE", event: event }),
+    searchSubmitHandler: () => dispatch({ type: "SEARCH_SUBMIT" })
   };
 };
 

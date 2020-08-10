@@ -10,6 +10,8 @@ import Tooltip from '@material-ui/core/Tooltip'
 import Collapse from '@material-ui/core/Collapse'
 import IconButton from '@material-ui/core/IconButton';
 import clsx from 'clsx'
+import tagStyles from '../../pages/home/tags/tag_styles/tagStyles'
+import Tag from '../../pages/home/tags/tag/tag'
 
 // icons
 import { ReactComponent as ExpandMoreIcon } from './Icons/expand.svg';
@@ -57,6 +59,14 @@ function LinkCard(props) {
         document.body.removeChild(el);
     }
 
+    const renderedTags = props.tags.map(tag => (
+        <Tag
+            key={`${props.title}-${tag}`}
+            tagName={tagStyles[tag].tagName}
+            bgColor={tagStyles[tag].bgColor}
+            type={tag} />
+    ))
+
     return (
         <Card className={classes.root}>
             <CardActionArea target="_blank" href={props.link} component="a">
@@ -71,6 +81,9 @@ function LinkCard(props) {
                     </Typography>
                 </CardContent>
             </CardActionArea>
+            <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", margin: "0 10px 0 10px" }}>
+                {renderedTags}
+            </div>
             <CardActions style={{ justifyContent: "center" }}>
                 <Tooltip title="copy link">
                     <IconButton
