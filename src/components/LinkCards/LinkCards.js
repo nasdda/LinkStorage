@@ -1,46 +1,42 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Grid } from '@material-ui/core'
-import LinkCard from './LinkCard/linkCard'
+import { connect } from 'react-redux'
+import Loader from '../Loader/loader'
 
 import './LinkCards.css'
 
-import links from '../../data/links'
+function LinkCards(props) {
+    const [displayCols, setDisplayCols] = useState([])
+    const [loading, setLoading] = useState(true)
 
-
-export default function (props) {
-    const renderedLinks = links.map(link => (
-        <Grid key={link.title} item>
-            <LinkCard
-                title={link.title}
-                image={link.image}
-                description={link.description}
-                link={link.link}
-            />
-        </Grid>
-    ))
-    // create 4 grids with flex-direction cols
-    let renderedCols = [[], [], [], []]
-    let j = 0
-    for (let i = 0; i < renderedLinks.length; i++) {
-        if (j > 3) {
-            j = 0
+    useEffect(() => {
+        if (props.rendered) {
+            setDisplayCols(props.displayCols)
+            setLoading(false)
+        } else {
+            props.renderLinks()
         }
-        renderedCols[j].push(renderedLinks[i])
-        j++;
-    }
-
-    renderedCols = renderedCols.map((col, index) => (
-        <Grid key={index} direction="column" spacing={2} container item lg={3} md={4} sm={6} xs={12}>
-            {col}
-        </Grid>
-    ))
-
+    }, [props.rendered])
 
     return (
         <div className="outter">
-            <Grid spacing={2} container>
-                {renderedCols}
-            </Grid>
+            {
+                loading ? <Loader /> : (
+                    <Grid spacing={2} container>
+                        {displayCols}
+                    </Grid>)
+            }
         </div>
     )
 }
+
+const mapStateToProps = state => ({
+    displayCols: state.displayCols,
+    rendered: state.rendered
+})
+
+const mapDispatchToProps = dispatch => ({
+    renderLinks: () => dispatch({ type: "RENDER_LINKS" })
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(LinkCards)
