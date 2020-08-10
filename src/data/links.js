@@ -65,6 +65,19 @@ const data = [
         image: leetcode,
         tags: [types.ALGORITHM, types.LEETCODE],
         link: "https://leetcode.com/discuss/general-discussion/458695/Dynamic-Programming-Patterns"
+    },
+    {
+        title: "RegEx Testing",
+        description: "Could quickly test regular expression logic and see if the logic matches what you are expecting. Also has a variety of regex templates which you can use.",
+        image: tool,
+        tags: [types.TOOL, types.ALGORITHM],
+        link: "https://www.regextester.com/97589"
+    }, {
+        title: "Kotlin Playground",
+        description: "An online Kotlin compiler which you can use to quickly run and test Kotlin code.",
+        image: tool,
+        tags: [types.TOOL, types.KOTLIN],
+        link: "https://play.kotlinlang.org/"
     }
 ]
 

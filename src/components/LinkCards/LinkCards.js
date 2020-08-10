@@ -19,19 +19,22 @@ export default function (props) {
         </Grid>
     ))
     // create 4 grids with flex-direction cols
-    const cardPerCol = Math.ceil(renderedLinks.length / 4)
-    let start = 0, end = cardPerCol;
-    const renderedCols = []
-
-    for (let i = 0; i < 4; i++) {
-        renderedCols.push((
-            <Grid key={i} direction="column" spacing={2} container item lg={3} md={4} sm={6} xs={12}>
-                {renderedLinks.slice(start, end)}
-            </Grid>
-        ))
-        start = end
-        end += cardPerCol
+    let renderedCols = [[], [], [], []]
+    let j = 0
+    for (let i = 0; i < renderedLinks.length; i++) {
+        if (j > 3) {
+            j = 0
+        }
+        renderedCols[j].push(renderedLinks[i])
+        j++;
     }
+
+    renderedCols = renderedCols.map((col, index) => (
+        <Grid key={index} direction="column" spacing={2} container item lg={3} md={4} sm={6} xs={12}>
+            {col}
+        </Grid>
+    ))
+
 
     return (
         <div className="outter">
