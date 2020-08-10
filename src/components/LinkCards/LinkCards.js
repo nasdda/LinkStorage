@@ -24,7 +24,7 @@ function LinkCards(props) {
     return (
         <div className="outter">
             {
-                loading ? <Loader /> : (
+                loading ? <div style={{ width: "100%", textAlign: "center" }}><Loader /></div> : (
                     <Grid spacing={2} container>
                         {displayCols}
                     </Grid>)
