@@ -56,7 +56,6 @@ function Home(props) {
         />
       </form>
       <TagSelector />
-
       <LinkCards />
     </div>
   );

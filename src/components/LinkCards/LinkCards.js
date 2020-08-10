@@ -60,6 +60,5 @@ export default function (props) {
                 </Grid>
             </Grid>
         </div>
-
     )
 }

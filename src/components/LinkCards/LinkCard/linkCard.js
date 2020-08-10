@@ -7,9 +7,12 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import Tooltip from '@material-ui/core/Tooltip'
+
+// icons
+import { ReactComponent as Copy } from '../../../Icons/copy.svg'
 
 import './linkCard.css'
-import { Hidden } from '@material-ui/core';
 
 export default function MediaCard(props) {
     const [expand, setExpand] = useState(false)
@@ -49,10 +52,12 @@ export default function MediaCard(props) {
                 </CardContent>
             </CardActionArea>
             <CardActions>
-                <Button size="small" color="primary">
-                    Share
-                </Button>
+                <Tooltip title="copy link">
+                    <Button size="small" color="primary">
+                        <Copy />
+                    </Button>
+                </Tooltip>
             </CardActions>
-        </Card>
+        </Card >
     );
 }
