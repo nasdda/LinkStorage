@@ -18,6 +18,7 @@ export default function (props) {
             />
         </Grid>
     ))
+    // create 4 grids with flex-direction cols
     const cardPerCol = Math.ceil(renderedLinks.length / 4)
     let start = 0, end = cardPerCol;
     const renderedCols = []
@@ -31,7 +32,6 @@ export default function (props) {
         start = end
         end += cardPerCol
     }
-
 
     return (
         <div className="outter">

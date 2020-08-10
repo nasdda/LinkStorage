@@ -12,8 +12,8 @@ import IconButton from '@material-ui/core/IconButton';
 import clsx from 'clsx'
 
 // icons
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import CopyIcon from '@material-ui/icons/FileCopyOutlined'
+import { ReactComponent as ExpandMoreIcon } from './Icons/expand.svg';
+import { ReactComponent as Copy } from './Icons/copy.svg'
 
 import './linkCard.css'
 
@@ -27,7 +27,7 @@ export default function MediaCard(props) {
         media: { // image size should be 200 x 120
             width: 160,
             height: 120,
-            margin: "auto"
+            margin: "auto",
         },
         expand: {
             transform: 'rotate(0deg)',
@@ -45,6 +45,16 @@ export default function MediaCard(props) {
     const handleExpandClick = () => {
         setExpand(!expand);
     };
+
+    const copyLink = () => {
+        const el = document.createElement('textarea');
+        el.value = props.link;
+        document.body.appendChild(el);
+        el.select();
+        document.execCommand('copy');
+        document.body.removeChild(el);
+    }
+
     return (
         <Card className={classes.root}>
             <CardActionArea target="_blank" href={props.link} component="a">
@@ -59,13 +69,15 @@ export default function MediaCard(props) {
                     </Typography>
                 </CardContent>
             </CardActionArea>
-            <CardActions>
+            <CardActions style={{ justifyContent: "center" }}>
                 <Tooltip title="copy link">
-                    <IconButton aria-label="copy link">
-                        <CopyIcon />
+                    <IconButton
+                        aria-label="copy link"
+                        onClick={copyLink}>
+                        <Copy />
                     </IconButton>
                 </Tooltip>
-                <Tooltip title="show description">
+                <Tooltip title={expand ? "hide description" : "show description"}>
                     <IconButton
                         className={clsx(classes.expand, {
                             [classes.expandOpen]: expand,
