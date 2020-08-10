@@ -17,8 +17,10 @@ import { ReactComponent as Copy } from './Icons/copy.svg'
 
 import './linkCard.css'
 
-export default function MediaCard(props) {
+function LinkCard(props) {
     const [expand, setExpand] = useState(false)
+
+    console.log("rerendering card")
 
     const useStyles = makeStyles(theme => ({
         root: {
@@ -95,6 +97,8 @@ export default function MediaCard(props) {
                     {props.description}
                 </Typography>
             </Collapse>
-        </Card >
+        </Card>
     );
 }
+
+export default React.memo(LinkCard)

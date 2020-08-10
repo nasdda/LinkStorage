@@ -78,7 +78,23 @@ const data = [
         image: tool,
         tags: [types.TOOL, types.KOTLIN],
         link: "https://play.kotlinlang.org/"
+    },
+    {
+        title: "React - The Complete Guide (incl Hooks, React Router, Redux)",
+        description: "A React which convers various aspects of React. Very good place to start learning React, though knowledge in HTML, CSS, and Javascript is assumed in the videos.",
+        image: video,
+        tags: [types.VIDEO, types.REACTJS, types.JAVASCRIPT],
+        link: "https://www.udemy.com/course/react-the-complete-guide-incl-redux/"
+    },
+    {
+        title: "React Redux",
+        description: "The official React Redux site containing the setup instructions and documentations.",
+        image: site,
+        tags: [types.REACTJS, types.SITE],
+        link: "https://react-redux.js.org/"
     }
 ]
+
+data.sort(() => Math.random() - 0.5)
 
 export default data

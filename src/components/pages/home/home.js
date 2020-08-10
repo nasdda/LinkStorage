@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 
 import { TextField } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
 import TagSelector from './tags/tag_selector/tag_selector'
 import "./home.css";
+
+import { connect } from 'react-redux'
+
 
 // test
 import LinkCards from '../../LinkCards/LinkCards'
@@ -25,16 +28,12 @@ const useStyles = makeStyles((theme) => ({
 
 function Home(props) {
   const classes = useStyles();
-
-  const [searchValue, setSearchValue] = useState("");
-
   const searchSubmitHandler = (event) => {
     event.preventDefault();
-    console.log(searchValue);
   };
 
   const searchChangeHandler = (event) => {
-    setSearchValue(event.target.value);
+    props.onSearchChange(event);
   };
 
   return (
@@ -49,7 +48,7 @@ function Home(props) {
           id="standard-basic"
           label="Search"
           className={classes.textField}
-          value={searchValue}
+          value={props.searchValue}
           onChange={searchChangeHandler}
           margin="normal"
           fullWidth
@@ -61,4 +60,16 @@ function Home(props) {
   );
 }
 
-export default Home;
+const mapStateToProps = state => {
+  return {
+    searchValue: state.searchValue
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    onSearchChange: event => dispatch({ type: "SEARCH_CHANGE", event: event })
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

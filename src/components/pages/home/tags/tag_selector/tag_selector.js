@@ -37,4 +37,4 @@ function TagSelector(props) {
     )
 }
 
-export default TagSelector
+export default React.memo(TagSelector)
