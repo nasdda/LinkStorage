@@ -5,7 +5,6 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Tooltip from '@material-ui/core/Tooltip'
 import Collapse from '@material-ui/core/Collapse'
@@ -23,17 +22,12 @@ export default function MediaCard(props) {
 
     const useStyles = makeStyles(theme => ({
         root: {
-            minWidth: 250,
-            height: "100%"
+            minWidth: 250
         },
         media: { // image size should be 200 x 120
-            width: 200,
+            width: 160,
             height: 120,
             margin: "auto"
-        },
-        content: {
-            height: 80,
-            overflowY: "hidden"
         },
         expand: {
             transform: 'rotate(0deg)',
@@ -53,14 +47,14 @@ export default function MediaCard(props) {
     };
     return (
         <Card className={classes.root}>
-            <CardActionArea>
+            <CardActionArea target="_blank" href={props.link} component="a">
                 <CardMedia
                     className={classes.media}
                     image={props.image}
                     title={props.title}
                 />
-                <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2" align="center">
+                <CardContent >
+                    <Typography variant="h5" component="h2" align="center" style={{ marginBottom: "0" }}>
                         {props.title}
                     </Typography>
                 </CardContent>
@@ -85,7 +79,7 @@ export default function MediaCard(props) {
                 </Tooltip>
             </CardActions>
             <Collapse in={expand} timeout="auto" unmountOnExit>
-                <Typography variant="body1" component="p">
+                <Typography variant="body1" component="p" style={{ margin: "10px" }}>
                     {props.description}
                 </Typography>
             </Collapse>

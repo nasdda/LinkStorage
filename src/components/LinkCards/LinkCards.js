@@ -4,60 +4,39 @@ import LinkCard from './LinkCard/linkCard'
 
 import './LinkCards.css'
 
-// images
-import site from "../../Thumbnails/site.png"
-import video from "../../Thumbnails/video.png"
-import article from "../../Thumbnails/article.png"
-import leetcode from "../../Thumbnails/leetcode.png"
-import tool from "../../Thumbnails/tool.png"
+import links from '../../data/links'
 
 
 export default function (props) {
+    const renderedLinks = links.map(link => (
+        <Grid key={link.title} item>
+            <LinkCard
+                title={link.title}
+                image={link.image}
+                description={link.description}
+                link={link.link}
+            />
+        </Grid>
+    ))
+    const cardPerCol = Math.ceil(renderedLinks.length / 4)
+    let start = 0, end = cardPerCol;
+    const renderedCols = []
+
+    for (let i = 0; i < 4; i++) {
+        renderedCols.push((
+            <Grid key={i} direction="column" spacing={2} container item lg={3} md={4} sm={6} xs={12}>
+                {renderedLinks.slice(start, end)}
+            </Grid>
+        ))
+        start = end
+        end += cardPerCol
+    }
+
+
     return (
         <div className="outter">
             <Grid spacing={2} container>
-                <Grid item lg={3} md={4} sm={6} xs={12}>
-                    <LinkCard
-                        title="Techie Delight"
-                        image={site}
-                        description="A helpful site containing plethora of algorithm problems with solutions."
-                    />
-                </Grid>
-                <Grid item lg={3} md={4} sm={6} xs={12}>
-                    <LinkCard
-                        title="Good Tool"
-                        image={tool}
-                        description="Tool for doing so and so. Very efficient."
-                    />
-                </Grid>
-                <Grid item lg={3} md={4} sm={6} xs={12}>
-                    <LinkCard
-                        title="Video"
-                        image={video}
-                        description="A helpful video."
-                    />
-                </Grid>
-                <Grid item lg={3} md={4} sm={6} xs={12}>
-                    <LinkCard
-                        title="React Documentary"
-                        image={site}
-                        description="Documentary of React."
-                    />
-                </Grid>
-                <Grid item lg={3} md={4} sm={6} xs={12}>
-                    <LinkCard
-                        title="DFS Problem"
-                        image={leetcode}
-                        description="A worthwhile problem which deals which is best solved using DFS."
-                    />
-                </Grid>
-                <Grid item lg={3} md={4} sm={6} xs={12}>
-                    <LinkCard
-                        title="Article"
-                        image={article}
-                        description="Fun article to read."
-                    />
-                </Grid>
+                {renderedCols}
             </Grid>
         </div>
     )
