@@ -13,8 +13,8 @@ const about = (props) => {
           that I found helpful and/or important.
           <br />
           Feel free to look around and see if there are any links that interests
-          you
-          <Emoji symbol="🙂" label="smile" />.
+          you.
+          {/* <Emoji symbol="🙂" label="smile" />. */}
         </h2>
       </div>
     </div>

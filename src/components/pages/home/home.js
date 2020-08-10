@@ -4,8 +4,10 @@ import { TextField } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
 import TagSelector from './tags/tag_selector/tag_selector'
-
 import "./home.css";
+
+// test
+import LinkCards from '../../LinkCards/LinkCards'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -54,6 +56,8 @@ function Home(props) {
         />
       </form>
       <TagSelector />
+
+      <LinkCards />
     </div>
   );
 }
