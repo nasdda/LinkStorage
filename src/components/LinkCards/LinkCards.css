@@ -1,5 +1,6 @@
 .outter {
-    padding: 0 5% 0 5%
+    padding: 0 5% 0 5%;
+    margin-bottom: 50px;
 }
 
 @media(max-width: 500px){
