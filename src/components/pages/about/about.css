@@ -1,10 +1,9 @@
 .text-content {
-    width: 750px;
+    width: 70%;
+    margin: auto
 }
 
-.inner-content{
-
-}
+.inner-content {}
 
 .contents {
     width: 100%;
@@ -14,14 +13,8 @@
     align-items: center;
 }
 
-@media(max-width: 750px){
-    .text-content{
-        width: 500px;
-    }
-}
-
-@media(max-width: 550px){
-    .text-content{
-        width: 400px;
+@media(max-width: 700px) {
+    .text-content {
+        width: 90%;
     }
 }

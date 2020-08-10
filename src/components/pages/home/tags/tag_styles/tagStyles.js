@@ -23,7 +23,7 @@ export default {
     [tagTypes.CPP]: { tagName: "C++", bgColor: "#8f0383" },
     [tagTypes.DATABASE]: { tagName: "Database", bgColor: "#1c7a60" },
     [tagTypes.JAVA]: { tagName: "Java", bgColor: "#592d00" },
-    [tagTypes.JAVASCRIPT]: { tagName: "Javascript", bgColor: "#b3ad00" },
+    [tagTypes.JAVASCRIPT]: { tagName: "Javascript", bgColor: "#b3b300" },
     [tagTypes.KOTLIN]: { tagName: "Kotlin", bgColor: "#3e2294" },
     [tagTypes.LEETCODE]: { tagName: "LeetCode", bgColor: "#bf912e" },
     [tagTypes.NODEJS]: { tagName: "Node.js", bgColor: "#018001" },
