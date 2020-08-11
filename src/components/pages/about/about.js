@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
-import Emoji from "../../Emojis/emoji";
+import Loader from '../../Loader/loader'
+
 import "./about.css";
 
-const about = (props) => {
-  return (
+function About(props) {
+  const [loading, setLoading] = useState(true)
+  useEffect(() => {
+    setLoading(false)
+  }, [])
+
+  return loading ? <Loader /> : (
     <div className="contents">
       <h1>About is this site...</h1>
       <div className="inner-content">
@@ -19,11 +25,10 @@ const about = (props) => {
           *Note*
           <br />
           You can filter links either by searching for keywords or by selecting to include specific tags.
-          {/* <Emoji symbol="🙂" label="smile" />. */}
         </h2>
       </div>
     </div>
   );
 };
 
-export default about;
+export default About;

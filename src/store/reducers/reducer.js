@@ -22,21 +22,15 @@ const searchValueChange = (state, action) => {
 
 const searchSubmit = (state, action) => {
     const val = state.searchValue.trim().toLowerCase()
+    if (state.toggledTags.size !== 0) {
+        var updatedLinks = links.filter(link => link.tags.some(t => state.toggledTags.has(t)))
+    }
     if (val) {
-        let updatedLinks = links.filter(link => link.title.toLowerCase().includes(val))
-        if (state.toggledTags.size !== 0) {
-            updatedLinks = updatedLinks.filter(link => link.tags.some(t => state.toggledTags.has(t)))
-        }
-
-        return {
-            ...state,
-            links: updatedLinks,
-            rendered: false
-        }
+        updatedLinks = updatedLinks.filter(link => link.title.toLowerCase().includes(val))
     }
     return {
         ...state,
-        links: [...links],
+        links: updatedLinks,
         rendered: false
     }
 }

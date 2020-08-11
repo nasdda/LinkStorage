@@ -31,7 +31,7 @@ function Home(props) {
     setLoading(false)
   }, [])
 
-  return loading ? <div style={{ width: "100%", textAlign: "center" }}><Loader /></div> : (
+  return loading ? <Loader /> : (
     <div className="contents">
       <form
         className={classes.root}
