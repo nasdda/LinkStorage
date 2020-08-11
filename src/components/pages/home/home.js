@@ -1,16 +1,13 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import { TextField, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-
 import TagSelector from './tags/tag_selector/tag_selector'
-import "./home.css";
-
 import { connect } from 'react-redux'
-
-
-// test
 import LinkCards from '../../LinkCards/LinkCards'
+import Loader from '../../Loader/loader'
+
+import "./home.css";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -27,9 +24,14 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function Home(props) {
+  const [loading, setLoading] = useState(true)
   const classes = useStyles();
 
-  return (
+  useEffect(() => {
+    setLoading(false)
+  }, [])
+
+  return loading ? <div style={{ width: "100%", textAlign: "center" }}><Loader /></div> : (
     <div className="contents">
       <form
         className={classes.root}
