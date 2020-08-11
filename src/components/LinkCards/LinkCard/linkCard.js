@@ -81,7 +81,7 @@ function LinkCard(props) {
                     </Typography>
                 </CardContent>
             </CardActionArea>
-            <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", margin: "0 10px 0 10px" }}>
+            <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", margin: "10px 10px 0 10px" }}>
                 {renderedTags}
             </div>
             <CardActions style={{ justifyContent: "center" }}>

@@ -14,6 +14,11 @@ const about = (props) => {
           <br />
           Feel free to look around and see if there are any links that interests
           you.
+          <br />
+          <br />
+          *Note*
+          <br />
+          You can filter links either by searching for keywords or by selecting to include specific tags.
           {/* <Emoji symbol="🙂" label="smile" />. */}
         </h2>
       </div>

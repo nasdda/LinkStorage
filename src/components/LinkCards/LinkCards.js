@@ -9,11 +9,13 @@ function LinkCards(props) {
     const [displayCols, setDisplayCols] = useState([])
     const [loading, setLoading] = useState(true)
 
+    console.log("HERE" , loading)
+
     useEffect(() => {
+        setLoading(setLoading(true))
         if (props.rendered) {
             setDisplayCols(props.displayCols)
         } else {
-            setLoading(true)
             props.renderLinks()
         }
         return () => {

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { TextField } from "@material-ui/core";
+import { TextField, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
 import TagSelector from './tags/tag_selector/tag_selector'
@@ -49,6 +49,7 @@ function Home(props) {
           margin="normal"
           fullWidth
         />
+        <Button type="submit" component="button">Search</Button>
       </form>
       <TagSelector />
       <LinkCards />

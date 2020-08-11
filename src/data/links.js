@@ -120,6 +120,27 @@ const data = [
         image: video,
         tags: [types.JAVA, types.VIDEO],
         link: "https://www.youtube.com/watch?v=1OpAgZvYXLQ&list=PLTp_ksmV342vyZtazrghEPYnWL4rplp_9"
+    },
+    {
+        title: "CPPReference",
+        description: "A C++ documentation site which contains detailed explaination and various use cases for C++ features.",
+        image: site,
+        tags: [types.CPP, types.SITE],
+        link: "https://en.cppreference.com/w/cpp/language/expressions"
+    },
+    {
+        title: "mongoDB",
+        description: "The official site of mongoDB. Contains pretty much everything you need to get started using mongoDB in your project.",
+        image: site,
+        tags: [types.DATABASE, types.SITE, types.JAVASCRIPT, types.NODEJS],
+        link: "https://www.mongodb.com/"
+    },
+    {
+        title: "Jump Game II",
+        description: "A challenging yet worthwhile problem which could be used to practiced both dynamic programming and greedy algorithm.",
+        image: leetcode,
+        tags: [types.LEETCODE, types.ALGORITHM],
+        link: "https://leetcode.com/problems/jump-game-ii/"
     }
 ]
 
