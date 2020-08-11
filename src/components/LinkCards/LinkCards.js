@@ -23,7 +23,7 @@ function LinkCards(props) {
         return () => {
             setLoading(false)
         }
-    }, [props, props.rendered, displayCols])
+    }, [props, displayCols])
 
     return (
         <div className="outter">
