@@ -22,8 +22,6 @@ import './linkCard.css'
 function LinkCard(props) {
     const [expand, setExpand] = useState(false)
 
-    console.log("rerendering card")
-
     const useStyles = makeStyles(theme => ({
         root: {
             minWidth: 250
