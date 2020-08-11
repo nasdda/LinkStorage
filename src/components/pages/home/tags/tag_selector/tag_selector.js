@@ -13,7 +13,8 @@ function TagSelector(props) {
             key={tagStyles[key].tagName}
             tagName={tagStyles[key].tagName}
             bgColor={tagStyles[key].bgColor}
-            type={key} />)
+            type={parseInt(key)}
+            clickable />)
     })
 
     return (

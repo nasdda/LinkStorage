@@ -1,14 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
+import { connect } from 'react-redux'
 
 import "./tag.css";
 
-const tag = (props) => {
-  console.log("rendering tag")
+function Tag(props) {
+  const [toggled, setToggled] = useState(props.toggledTags.has(props.type))
+  let styles = ["tag"]
+  if (props.clickable) styles.push("clickable")
+  if (toggled) styles.push("toggled")
+
+  styles = styles.join(' ')
+
+  const clickHandler = event => {
+    setToggled(!toggled)
+    props.tagToggled(props.type)
+  }
+
   return (
-    <div className="tag" style={{ backgroundColor: props.bgColor }}>
+    <button className={styles} style={{ backgroundColor: props.bgColor }} onClick={clickHandler} disabled={!props.clickable}>
       {props.tagName}
-    </div>
+    </button>
   )
 };
 
-export default tag;
+const mapStateToProps = state => ({
+  toggledTags: state.toggledTags
+})
+
+const mapDispatchToProps = dispatch => ({
+  tagToggled: tagType => dispatch({ type: 'TAG_TOGGLED', tagType: tagType })
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Tag);

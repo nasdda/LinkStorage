@@ -4,12 +4,13 @@ import { Grid } from '@material-ui/core'
 import LinkCard from '../../components/LinkCards/LinkCard/linkCard'
 
 const initialState = {
-    links: links,
+    links: [...links],
     searchValue: "",
     renderedLinks: [],
     renderedCols: [],
     displayCols: [],
-    rendered: false
+    rendered: false,
+    toggledTags: new Set()
 }
 
 const searchValueChange = (state, action) => {
@@ -32,7 +33,7 @@ const searchSubmit = (state, action) => {
     }
     return {
         ...state,
-        links: links,
+        links: [...links],
         rendered: false
     }
 }
@@ -81,11 +82,29 @@ const renderLinks = (state, action) => {
 }
 
 
+const tagToggled = (state, action) => {
+    const newToggledTags = new Set(state.toggledTags)
+    if (newToggledTags.has(action.tagType)) {
+        newToggledTags.delete(action.tagType)
+    } else {
+        newToggledTags.add(action.tagType)
+    }
+
+    const newLinks = (newToggledTags.size !== 0) ? links.filter(link => link.tags.some(t => newToggledTags.has(t))) : [...links]
+    return {
+        ...state,
+        toggledTags: newToggledTags,
+        links: newLinks,
+        rendered: false
+    }
+}
+
 const reducer = (state = initialState, action) => {
     switch (action.type) {
         case 'SEARCH_CHANGE': return searchValueChange(state, action);
         case 'RENDER_LINKS': return renderLinks(state, action);
-        case 'SEARCH_SUBMIT': return searchSubmit(state, action)
+        case 'SEARCH_SUBMIT': return searchSubmit(state, action);
+        case 'TAG_TOGGLED': return tagToggled(state, action)
         default: return state;
     }
 };

@@ -113,6 +113,13 @@ const data = [
         image: video,
         tags: [types.PYTHON, types.VIDEO],
         link: "https://www.youtube.com/watch?v=7lmCu8wz8ro&list=PLTp_ksmV342tzX6Bu1YjSixaRZ0U6yJsV&index=2&t=0s"
+    },
+    {
+        title: "Get a Taste of Lambdas and Get Addicted to Streams",
+        description: "A video demonstrating the advantages of and what you can do with Java's Lambda and Stream feature.",
+        image: video,
+        tags: [types.JAVA, types.VIDEO],
+        link: "https://www.youtube.com/watch?v=1OpAgZvYXLQ&list=PLTp_ksmV342vyZtazrghEPYnWL4rplp_9"
     }
 ]
 
