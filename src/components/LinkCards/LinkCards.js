@@ -25,7 +25,7 @@ function LinkCards(props) {
         <div className="outter">
             {
                 loading ? <Loader /> : (
-                    <Grid spacing={2} justify="center" container>
+                    <Grid spacing={1} justify="center" container>
                         {displayCols}
                     </Grid>)
             }

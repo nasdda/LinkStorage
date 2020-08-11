@@ -3,8 +3,8 @@
     margin-bottom: 50px;
 }
 
-@media(max-width: 500px){
-    .outter{
+@media(max-width: 800px) {
+    .outter {
         width: 100%
     }
 }
