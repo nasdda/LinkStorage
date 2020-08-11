@@ -65,7 +65,7 @@ function LinkCard(props) {
             tagName={tagStyles[tag].tagName}
             bgColor={tagStyles[tag].bgColor}
             type={tag} />
-    )), [])
+    )), [props])
 
     return (
         <Card className={classes.root}>

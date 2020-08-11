@@ -6,17 +6,19 @@ import Loader from '../Loader/loader'
 import './LinkCards.css'
 
 function LinkCards(props) {
-    const [displayCols, setDisplayCols] = useState([])
+    const [displayCols, setDisplayCols] = useState(null)
     const [loading, setLoading] = useState(true)
 
-    console.log("HERE" , loading)
+    console.log("HERE", loading)
 
     useEffect(() => {
-        setLoading(setLoading(true))
         if (props.rendered) {
             setDisplayCols(props.displayCols)
         } else {
             props.renderLinks()
+            return () => {
+                setLoading(true)
+            }
         }
         return () => {
             setLoading(false)
