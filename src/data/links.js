@@ -106,6 +106,13 @@ const data = [
         image: tool,
         tags: [types.PYTHON, types.TOOL],
         link: "https://jupyter.org/"
+    },
+    {
+        title: "What Does It Take To Be An Expert At Python",
+        description: "A video about effective Python programming. Goes over essential concepts such as Dunder methods.",
+        image: video,
+        tags: [types.PYTHON, types.VIDEO],
+        link: "https://www.youtube.com/watch?v=7lmCu8wz8ro&list=PLTp_ksmV342tzX6Bu1YjSixaRZ0U6yJsV&index=2&t=0s"
     }
 ]
 

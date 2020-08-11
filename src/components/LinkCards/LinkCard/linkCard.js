@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -59,13 +59,13 @@ function LinkCard(props) {
         document.body.removeChild(el);
     }
 
-    const renderedTags = props.tags.map(tag => (
+    const renderedTags = useMemo(() => props.tags.map(tag => (
         <Tag
             key={`${props.title}-${tag}`}
             tagName={tagStyles[tag].tagName}
             bgColor={tagStyles[tag].bgColor}
             type={tag} />
-    ))
+    )), [])
 
     return (
         <Card className={classes.root}>
