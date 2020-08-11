@@ -71,7 +71,7 @@ const data = [
         description: "Could quickly test regular expression logic and see if the logic matches what you are expecting. Also has a variety of regex templates which you can use.",
         image: tool,
         tags: [types.TOOL, types.ALGORITHM],
-        link: "https://www.regextester.com/97589"
+        link: "https://www.regextester.com/"
     }, {
         title: "Kotlin Playground",
         description: "An online Kotlin compiler which you can use to quickly run and test Kotlin code.",
@@ -141,6 +141,27 @@ const data = [
         image: leetcode,
         tags: [types.LEETCODE, types.ALGORITHM],
         link: "https://leetcode.com/problems/jump-game-ii/"
+    },
+    {
+        title: "Firebase - Back to the Basics",
+        description: "A video demonstrating the basics of how to set up firebase for your web application.",
+        image: video,
+        tags: [types.VIDEO, types.DATABASE],
+        link: "https://www.youtube.com/watch?v=q5J5ho7YUhA"
+    },
+    {
+        title: "Rediscovering JavaScript",
+        description: "The video goes over various aspects of modern JavaScript such as the newer syntaxes and features.",
+        image: video,
+        tags: [types.VIDEO, types.JAVASCRIPT],
+        link: "https://www.youtube.com/watch?v=dxzBZpzzzo8"
+    },
+    {
+        title: "Set up a React app with a Node.js server proxy",
+        description: "An intuitive article demonstrating how to include an Express server by utilizing the 'proxy' key in your React app's package.json.",
+        image: article,
+        tags: [types.ARTICLE, types.REACTJS, types.NODEJS],
+        link: "https://www.twilio.com/blog/react-app-with-node-js-server-proxy"
     }
 ]
 

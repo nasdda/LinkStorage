@@ -6,8 +6,13 @@ import "./tag.css";
 function Tag(props) {
   const [toggled, setToggled] = useState(props.toggledTags.has(props.type))
   let styles = ["tag"]
-  if (props.clickable) styles.push("clickable")
-  if (toggled) styles.push("toggled")
+  if (props.clickable) {
+    styles.push("clickable")
+    if (toggled) {
+      styles.push("toggled")
+    }
+  }
+
 
   styles = styles.join(' ')
 

@@ -22,8 +22,9 @@ const searchValueChange = (state, action) => {
 
 const searchSubmit = (state, action) => {
     const val = state.searchValue.trim().toLowerCase()
+    let updatedLinks = links
     if (state.toggledTags.size !== 0) {
-        var updatedLinks = links.filter(link => link.tags.some(t => state.toggledTags.has(t)))
+        updatedLinks = links.filter(link => link.tags.some(t => state.toggledTags.has(t)))
     }
     if (val) {
         updatedLinks = updatedLinks.filter(link => link.title.toLowerCase().includes(val))
@@ -64,7 +65,7 @@ const renderLinks = (state, action) => {
     }
 
     const displayCols = renderedCols.map((col, index) => (
-        <Grid key={index} direction="column" spacing={2} container item lg={3} md={4} sm={6} xs={12}>
+        <Grid key={index} direction="column" spacing={2} container item lg={3} sm={6} xs={12}>
             {col}
         </Grid>
     ))
