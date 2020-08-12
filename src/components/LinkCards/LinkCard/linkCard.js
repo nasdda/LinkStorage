@@ -24,7 +24,8 @@ function LinkCard(props) {
 
     const useStyles = makeStyles(theme => ({
         root: {
-            minWidth: 250
+            width: 300,
+            margin: "0 10px 10px 10px"
         },
         media: { // image size should be 200 x 120
             width: 160,

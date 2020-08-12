@@ -1,40 +1,47 @@
 import React, { useEffect, useState } from 'react'
-import { Grid } from '@material-ui/core'
 import { connect } from 'react-redux'
 import Loader from '../Loader/loader'
+import Masonry from 'react-masonry-component'
 
 import './LinkCards.css'
 
+const masonryOptions = {
+    transitionDuration: 0,
+    fitWidth: true
+};
+
 function LinkCards(props) {
-    const [displayCols, setDisplayCols] = useState(null)
+    const [renderedLinks, setRenderedLinks] = useState(null)
     const [loading, setLoading] = useState(true)
 
 
     useEffect(() => {
         if (props.rendered) {
-            setDisplayCols(props.displayCols)
+            setRenderedLinks(props.displayCols)
         } else {
             props.renderLinks()
         }
         return () => {
             setLoading(false)
         }
-    }, [props, displayCols])
+    }, [props, renderedLinks])
 
     return (
         <div className="outter">
             {
                 loading ? <Loader /> : (
-                    <Grid spacing={1} justify="center" container>
-                        {displayCols}
-                    </Grid>)
+                    <Masonry options={masonryOptions} enableResizableChildren style={{ margin: "auto" }}>
+                        {renderedLinks}
+                    </Masonry>
+
+                )
             }
         </div>
     )
 }
 
 const mapStateToProps = state => ({
-    displayCols: state.displayCols,
+    displayCols: state.renderedLinks,
     rendered: state.rendered
 })
 

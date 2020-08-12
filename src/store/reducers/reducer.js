@@ -7,8 +7,6 @@ const initialState = {
     links: [...links],
     searchValue: "",
     renderedLinks: [],
-    renderedCols: [],
-    displayCols: [],
     rendered: false,
     toggledTags: new Set()
 }
@@ -48,33 +46,9 @@ const renderLinks = (state, action) => {
             />
         </Grid>
     ))
-    // create 4 grids with flex-direction cols
-    const renderedCols = [[], [], [], []]
-    let j = 0
-    for (let i = 0; i < renderedLinks.length; i++) {
-        if (j > 3) j = 0
-        renderedCols[j].push(renderedLinks[i])
-        j++;
-    }
-    for (let i = 0; i < renderedLinks.length % 4; i++) {
-        if (j > 3) j = 0
-        renderedCols[j].push(
-            <Grid key={`dummygrid-${i}`} style={{ minWidth: 250, margin: "0 20px 0 20px" }} item />
-        )
-        j++;
-    }
-
-    const displayCols = renderedCols.map((col, index) => (
-        <Grid key={index} direction="column" spacing={2} container item lg={3} sm={6} xs={12}>
-            {col}
-        </Grid>
-    ))
-
     return {
         ...state,
         renderedLinks,
-        renderedCols,
-        displayCols,
         rendered: true
     }
 }
