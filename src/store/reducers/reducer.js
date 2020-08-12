@@ -36,15 +36,14 @@ const searchSubmit = (state, action) => {
 
 const renderLinks = (state, action) => {
     const renderedLinks = state.links.map(link => (
-        <Grid key={link.title} item>
-            <LinkCard
-                title={link.title}
-                image={link.image}
-                description={link.description}
-                link={link.link}
-                tags={link.tags}
-            />
-        </Grid>
+        <LinkCard
+            key={link.title}
+            title={link.title}
+            image={link.image}
+            description={link.description}
+            link={link.link}
+            tags={link.tags}
+        />
     ))
     return {
         ...state,
