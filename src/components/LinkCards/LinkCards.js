@@ -7,7 +7,8 @@ import './LinkCards.css'
 
 const masonryOptions = {
     transitionDuration: "0.5s",
-    fitWidth: true
+    fitWidth: true,
+    resize: true
 };
 
 function LinkCards(props) {

@@ -45,6 +45,10 @@ const renderLinks = (state, action) => {
             tags={link.tags}
         />
     ))
+    const remaining = 4 - renderedLinks.size
+    for(let i = 0; i < remaining; i++){
+        renderedLinks.push(<div key={`dummy#${i}`} style={{width: 300, height: 200}}></div>)
+    }
     return {
         ...state,
         renderedLinks,
