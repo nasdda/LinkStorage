@@ -162,6 +162,13 @@ const data = [
         image: article,
         tags: [types.ARTICLE, types.REACTJS, types.NODEJS],
         link: "https://www.twilio.com/blog/react-app-with-node-js-server-proxy"
+    },
+    {
+        title: "Online C++ Compiler",
+        description: "An online C++ compiler that is decently fast. Great tool to use if you want to run some simple C++ code but is too lazy to open an IDE or compile the code in terminal.",
+        image: tool,
+        tags: [types.TOOL, types.CPP],
+        link: "https://www.onlinegdb.com/online_c++_compiler"
     }
 ]
 

@@ -16,7 +16,7 @@ function About(props) {
       <div className="inner-content">
         <h2 className="text-content">
           This site is a collection of links to articles, videos, websites, etc.
-          that I found helpful and/or important.
+          that I personally found helpful and/or important.
           <br />
           Feel free to look around and see if there are any links that interests
           you.
