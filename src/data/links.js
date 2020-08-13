@@ -104,7 +104,7 @@ const data = [
         description: "A video about effective Python programming. Goes over essential concepts such as Dunder methods.",
         image: video,
         tags: [types.PYTHON, types.VIDEO],
-        link: "https://www.youtube.com/watch?v=7lmCu8wz8ro&list=PLTp_ksmV342tzX6Bu1YjSixaRZ0U6yJsV&index=2&t=0s"
+        link: "https://www.youtube.com/watch?v=7lmCu8wz8ro&list=PLTp_ksmV342tzX6Bu1YjSixaRZ0U6yJsV"
     },
     {
         title: "Get a Taste of Lambdas and Get Addicted to Streams",
