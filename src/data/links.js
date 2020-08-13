@@ -7,14 +7,6 @@ import article from "../Thumbnails/article.png"
 import leetcode from "../Thumbnails/leetcode.png"
 import tool from "../Thumbnails/tool.png"
 
-// {
-//     title:,
-//     description:,
-//     image:,
-//     tags:,
-//     link:,
-// }
-
 
 const data = [
     {
@@ -169,6 +161,27 @@ const data = [
         image: tool,
         tags: [types.TOOL, types.CPP],
         link: "https://www.onlinegdb.com/online_c++_compiler"
+    },
+    {
+        title: "Cherno's C++ Playlist",
+        description: "The playlist contains many C++ concepts/features, ranging from the basics to intermediate.",
+        image: video,
+        tags: [types.VIDEO,types.CPP],
+        link: "https://www.youtube.com/watch?v=18c3MTX0PK0&list=PLlrATfBNZ98dudnM48yfGUldqGD0S4FFb"
+    },
+    {
+    	title: "105 STL Algorithms in Less Than an Hour",
+    	description: "The video briefly goes over various C++ standard library algorithms.",
+    	image: video,
+    	tags: [types.VIDEO, types.CPP, types.ALGORITHM],
+    	link: "https://www.youtube.com/watch?v=bFSnXNIsK4A"
+    },
+    {
+    	title: "Robo 3T",
+    	description: "GUI for mongoDB. Allows you to easily view and interpret your mongoDB data.",
+    	image: tool,
+    	tags: [types.TOOL, types.DATABASE],
+    	link: "https://robomongo.org/"
     }
 ]
 

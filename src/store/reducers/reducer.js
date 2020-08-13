@@ -1,6 +1,5 @@
 import links from '../../data/links'
 import React from 'react'
-import { Grid } from '@material-ui/core'
 import LinkCard from '../../components/LinkCards/LinkCard/linkCard'
 
 const initialState = {
@@ -47,7 +46,7 @@ const renderLinks = (state, action) => {
     ))
     const remaining = 4 - renderedLinks.size
     for(let i = 0; i < remaining; i++){
-        renderedLinks.push(<div key={`dummy#${i}`} style={{width: 300, height: 200}}></div>)
+        renderedLinks.push(<div key={`dummy#${i}`} style={{width: 300, height: 10}}></div>)
     }
     return {
         ...state,
