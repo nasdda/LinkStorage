@@ -29,7 +29,8 @@ function Tag(props) {
 };
 
 const mapStateToProps = state => ({
-  toggledTags: state.toggledTags
+  toggledTags: state.toggledTags,
+  rendered: state.rendered
 })
 
 const mapDispatchToProps = dispatch => ({

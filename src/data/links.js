@@ -25,7 +25,7 @@ const data = [
     },
     {
         title: "The Complete Node.js Developer Course (3rd Edition)",
-        description: "Node.js course introducing many essential knowledge about Node.js. Very good place to start if you're just getting into learning Node.js",
+        description: "Node.js course introducing many essential knowledge about Node.js. Very good place to start if you're just starting to learn Node.js",
         image: video,
         tags: [types.VIDEO, types.NODEJS, types.JAVASCRIPT],
         link: "https://www.udemy.com/course/the-complete-nodejs-developer-course-2/",
@@ -182,6 +182,20 @@ const data = [
     	image: tool,
     	tags: [types.TOOL, types.DATABASE],
     	link: "https://robomongo.org/"
+    },
+    {
+        title: "repl.it",
+        description: "A browser IDE which supports a large variety of programming languages.",
+        image: tool,
+        tags: [types.TOOL, types.JAVA, types.PYTHON, types.CPP],
+        link: "https://repl.it/"
+    },
+    {
+        title: "Cycle detection",
+        description: "A wikipedia article about the problem of cycle detection and certain algorithms used to solve the problem, such as Floyd's Tortoise and Hare algorithm.",
+        type: article,
+        tags: [types.ARTICLE, types.ALGORITHM]
+        link: "https://en.wikipedia.org/wiki/Cycle_detection"
     }
 ]
 
