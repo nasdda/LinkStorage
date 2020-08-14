@@ -194,7 +194,7 @@ const data = [
         title: "Cycle detection",
         description: "A wikipedia article about the problem of cycle detection and certain algorithms used to solve the problem, such as Floyd's Tortoise and Hare algorithm.",
         type: article,
-        tags: [types.ARTICLE, types.ALGORITHM]
+        tags: [types.ARTICLE, types.ALGORITHM],
         link: "https://en.wikipedia.org/wiki/Cycle_detection"
     }
 ]
