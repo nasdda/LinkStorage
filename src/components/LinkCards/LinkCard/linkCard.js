@@ -27,7 +27,8 @@ function LinkCard(props) {
             width: 300,
             margin: "0 10px 10px 10px"
         },
-        media: { // image size should be 200 x 120
+        media: {
+            // image size should be 200 x 120
             width: 160,
             height: 120,
             margin: "auto",
