@@ -196,6 +196,27 @@ const data = [
         image: article,
         tags: [types.ARTICLE, types.ALGORITHM],
         link: "https://en.wikipedia.org/wiki/Cycle_detection"
+    },
+    {
+        title: "Google's Android Development Courses",
+        description: "A compilation of the free courses offered by Google to help developers get into Android app development. Topics include both Java and Kotlin, as well as how to utilize the development structure provided in Android Studio.",
+        image: video,
+        tags: [types.VIDEO, types.KOTLIN, types.JAVA],
+        link: "https://developer.android.com/courses"
+    },
+    {
+        title: "Best Time to Buy and Sell Stock III",
+        description: "A leetcode problem which requires and hence helps improve critical thinking and algorithmic visualization in order to come up with a solution is that efficient enough for accomplishing the testcases.",
+        image: leetcode,
+        tags: [types.LEETCODE, types.ALGORITHM],
+        link: "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/"
+    },
+    {
+        title: "Cheapest Flights Within K Stops",
+        description: "A problem which could be solved using dynamic programming and Dijkstra's algorithm.",
+        image: leetcode,
+        tags: [types.LEETCODE, types.ALGORITHM],
+        link: "https://leetcode.com/problems/cheapest-flights-within-k-stops/"
     }
 ]
 
