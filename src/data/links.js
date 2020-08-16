@@ -217,6 +217,20 @@ const data = [
         image: leetcode,
         tags: [types.LEETCODE, types.ALGORITHM],
         link: "https://leetcode.com/problems/cheapest-flights-within-k-stops/"
+    },
+    {
+        title: "Boats to Save People",
+        description: "A good problem to practice double pointer strategy on.",
+        image: leetcode,
+        tags: [types.LEETCODE, types.ALGORITHM], 
+        link: "https://leetcode.com/problems/boats-to-save-people/"
+    },
+    {
+        title: "Delete Operation for Two Strings",
+        description: "A Leetcode problem which could be solved using dynamic programming with varying turns/focus.",
+        image: leetcode,
+        tags: [types.LEETCODE, types.ALGORITHM],
+        link: "https://leetcode.com/problems/delete-operation-for-two-strings/"
     }
 ]
 
