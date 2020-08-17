@@ -6,7 +6,7 @@ import Masonry from 'react-masonry-component'
 import './LinkCards.css'
 
 const masonryOptions = {
-    transitionDuration: "0.5s",
+    transitionDuration: "0.3s",
     fitWidth: true,
     resize: true
 };
