@@ -231,6 +231,34 @@ const data = [
         image: leetcode,
         tags: [types.LEETCODE, types.ALGORITHM],
         link: "https://leetcode.com/problems/delete-operation-for-two-strings/"
+    },
+    {
+        title: "Populating Next Right Pointers in Each Node",
+        description: "Very interesting problem which helps with your understanding of binary tree structure.",
+        image: leetcode,
+        tags: [types.LEETCODE, types.ALGORITHM],
+        link: "https://leetcode.com/problems/populating-next-right-pointers-in-each-node/"
+    },
+    {
+        title: "Data Structures Easy to Advanced Course",
+        description: "Contains various in-depth examples and implementations of important data structures.",
+        image: video,
+        tags: [types.VIDEO, types.ALGORITHM],
+        link: "https://www.youtube.com/watch?v=RBSGKlAvoiM/"
+    },
+    {
+        title: "Union-Find Algorithm",
+        description: "Various applications and implementations of the union-find algorithm. Highly recommended to attempt the leetcode problem \"Smallest String With Swaps\" to practice after finishing.",
+        image: article,
+        tags: [types.ARTICLE, types.ALGORITHM],
+        link: "https://www.cs.princeton.edu/~rs/AlgsDS07/01UnionFind.pdf/"
+    },
+    {
+        title: "Smallest String With Swaps",
+        image: leetcode,
+        tags: [types.LEETCODE, types.ALGORITHM],
+        description: "Could be solved by utilizing union-find. Highly recommended to attempt this problem after reading the content of \"Union-Find Algorithm\".",
+        link: "https://leetcode.com/problems/smallest-string-with-swaps/"
     }
 ]
 
