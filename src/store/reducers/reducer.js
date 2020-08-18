@@ -88,7 +88,7 @@ const tagToggled = (state, action) => {
 
 const nextPage = (state, action) => {
     const temp = Object.keys(state.links).length / LINKS_PER_PAGE
-    const LAST_PAGE = Math.ceil(temp) == temp ? temp - 1 : Math.ceil(temp) 
+    const LAST_PAGE = Math.ceil(temp) === temp ? temp - 1 : Math.ceil(temp) 
     if (state.page >= LAST_PAGE) {
         return {
             ...state
