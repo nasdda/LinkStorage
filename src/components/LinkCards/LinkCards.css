@@ -1,6 +1,6 @@
 .outter {
-    width: 90%;
-    margin-bottom: 50px;
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 @media(max-width: 1000px) {

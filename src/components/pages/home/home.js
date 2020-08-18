@@ -55,6 +55,32 @@ function Home(props) {
       </form>
       <TagSelector />
       <LinkCards />
+      <div>
+        <Button variant="contained"
+          style={
+            {
+              marginBottom: 30,
+              width: 120,
+              height: 50,
+              fontSize: 24
+            }
+          }
+          onClick={props.onPrevPage}
+        >prev</Button>
+
+        <Button variant="contained"
+          style={
+            {
+              marginBottom: 30,
+              width: 120,
+              height: 50,
+              fontSize: 24
+            }
+          }
+          onClick={props.onNextPage}
+        >Next</Button>
+      </div>
+
     </div>
   );
 }
@@ -68,7 +94,9 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     onSearchChange: event => dispatch({ type: "SEARCH_CHANGE", event: event }),
-    searchSubmitHandler: () => dispatch({ type: "SEARCH_SUBMIT" })
+    searchSubmitHandler: () => dispatch({ type: "SEARCH_SUBMIT" }),
+    onNextPage: event => dispatch({ type: "NEXT_PAGE" }),
+    onPrevPage: event => dispatch({ type: "PREV_PAGE" })
   };
 };
 

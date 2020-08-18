@@ -24,7 +24,6 @@ function LinkCard(props) {
 
     const useStyles = makeStyles(theme => ({
         root: {
-            width: 300,
             margin: "0 10px 10px 10px"
         },
         media: {
