@@ -3,6 +3,11 @@ import { connect } from 'react-redux'
 import { Button } from "@material-ui/core";
 import './navbuttons.css'
 function NavButtons(props) {
+    const toTop = () => {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+
     return (
         <div className="nav-buttons">
             <Button variant="contained"
@@ -14,7 +19,10 @@ function NavButtons(props) {
                         fontSize: 24
                     }
                 }
-                onClick={props.onPrevPage}
+                onClick={event => {
+                    props.onPrevPage()
+                    toTop()
+                }}
             >prev</Button>
 
             <Button variant="contained"
@@ -26,7 +34,10 @@ function NavButtons(props) {
                         fontSize: 24
                     }
                 }
-                onClick={props.onNextPage}
+                onClick={event => {
+                    props.onNextPage()
+                    toTop()
+                }}
             >Next</Button>
         </div>
     )
@@ -35,8 +46,8 @@ function NavButtons(props) {
 
 const mapDispatchToProps = dispatch => {
     return {
-        onNextPage: event => dispatch({ type: "NEXT_PAGE" }),
-        onPrevPage: event => dispatch({ type: "PREV_PAGE" })
+        onNextPage: () => dispatch({ type: "NEXT_PAGE" }),
+        onPrevPage: () => dispatch({ type: "PREV_PAGE" })
     }
 }
 
