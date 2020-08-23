@@ -14,14 +14,6 @@ const initialState = {
 }
 
 
-const getLinksRange = (state) => {
-    return {
-        start: (state.page - 1) * LINKS_PER_PAGE,
-        end: state.page * LINKS_PER_PAGE
-    }
-}
-
-
 const searchValueChange = (state, action) => {
     return {
         ...state,
@@ -46,8 +38,15 @@ const searchSubmit = (state, action) => {
     }
 }
 
+const getLinksRange = (page) => {
+    return {
+        start: (page - 1) * LINKS_PER_PAGE,
+        end: page * LINKS_PER_PAGE
+    }
+}
+
 const renderLinks = (state, action) => {
-    const { start, end } = getLinksRange(state)
+    const { start, end } = getLinksRange(state.page)
     const displayedLinks = state.links.slice(start, end)
     const renderedLinks = displayedLinks.map(link => (
         <LinkCard
@@ -65,7 +64,6 @@ const renderLinks = (state, action) => {
         rendered: true
     }
 }
-
 
 const tagToggled = (state, action) => {
     const newToggledTags = new Set(state.toggledTags)
@@ -88,7 +86,7 @@ const tagToggled = (state, action) => {
 
 const nextPage = (state, action) => {
     const temp = Object.keys(state.links).length / LINKS_PER_PAGE
-    const LAST_PAGE = Math.ceil(temp) === temp ? temp - 1 : Math.ceil(temp) 
+    const LAST_PAGE = Math.ceil(temp) === temp ? temp - 1 : Math.ceil(temp)
     if (state.page >= LAST_PAGE) {
         return {
             ...state

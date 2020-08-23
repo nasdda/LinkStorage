@@ -166,22 +166,22 @@ const data = [
         title: "Cherno's C++ Playlist",
         description: "The playlist contains many C++ concepts/features, ranging from the basics to intermediate.",
         image: video,
-        tags: [types.VIDEO,types.CPP],
+        tags: [types.VIDEO, types.CPP],
         link: "https://www.youtube.com/watch?v=18c3MTX0PK0&list=PLlrATfBNZ98dudnM48yfGUldqGD0S4FFb"
     },
     {
-    	title: "105 STL Algorithms in Less Than an Hour",
-    	description: "The video briefly goes over various C++ standard library algorithms.",
-    	image: video,
-    	tags: [types.VIDEO, types.CPP, types.ALGORITHM],
-    	link: "https://www.youtube.com/watch?v=bFSnXNIsK4A"
+        title: "105 STL Algorithms in Less Than an Hour",
+        description: "The video briefly goes over various C++ standard library algorithms.",
+        image: video,
+        tags: [types.VIDEO, types.CPP, types.ALGORITHM],
+        link: "https://www.youtube.com/watch?v=bFSnXNIsK4A"
     },
     {
-    	title: "Robo 3T",
-    	description: "GUI for mongoDB. Allows you to easily view and interpret your mongoDB data.",
-    	image: tool,
-    	tags: [types.TOOL, types.DATABASE],
-    	link: "https://robomongo.org/"
+        title: "Robo 3T",
+        description: "GUI for mongoDB. Allows you to easily view and interpret your mongoDB data.",
+        image: tool,
+        tags: [types.TOOL, types.DATABASE],
+        link: "https://robomongo.org/"
     },
     {
         title: "repl.it",
@@ -222,7 +222,7 @@ const data = [
         title: "Boats to Save People",
         description: "A good problem to practice double pointer strategy on.",
         image: leetcode,
-        tags: [types.LEETCODE, types.ALGORITHM], 
+        tags: [types.LEETCODE, types.ALGORITHM],
         link: "https://leetcode.com/problems/boats-to-save-people/"
     },
     {
@@ -273,6 +273,13 @@ const data = [
         image: video,
         tags: [types.VIDEO, types.ALGORITHM],
         link: "https://www.coursera.org/learn/algorithms-part2/home/welcome"
+    },
+    {
+        title: "Get Equal Substrings Within Budget",
+        description: "Great for if you want to practice and familiarize yourself with sliding window problems.",
+        image: leetcode,
+        tags: [types.LEETCODE, types.ALGORITHM],
+        link: "https://leetcode.com/problems/get-equal-substrings-within-budget/"
     }
 ]
 

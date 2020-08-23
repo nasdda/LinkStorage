@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 300px
+    width: 25rem
 }
 
 svg {
@@ -10,4 +10,7 @@ svg {
     height: 20px;
     transition: all 0.5s
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3b001c13f68066872f98d9c8e32c9d702164217f
