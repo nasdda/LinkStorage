@@ -2,11 +2,24 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 22rem
+    width: 300px
 }
 
 svg {
     width: 20px;
     height: 20px;
     transition: all 0.5s
+}
+
+
+@media(min-width: 1000px){
+    .MuiCard-root{
+        width: 300
+    }
+}
+
+@media(min-width: 1500px){
+    .MuiCard-root{
+        width: 350px
+    }
 }
