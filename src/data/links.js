@@ -255,10 +255,24 @@ const data = [
     },
     {
         title: "Smallest String With Swaps",
+        description: "Could be solved by utilizing union-find. Highly recommended to attempt this problem after reading the content of \"Union-Find Algorithm\".",
         image: leetcode,
         tags: [types.LEETCODE, types.ALGORITHM],
-        description: "Could be solved by utilizing union-find. Highly recommended to attempt this problem after reading the content of \"Union-Find Algorithm\".",
         link: "https://leetcode.com/problems/smallest-string-with-swaps/"
+    },
+    {
+        title: "Algorithms, Part I",
+        description: "A course going through various data structures and algorithms which would help build a strong foundation in designing efficient algorithms.",
+        image: video,
+        tags: [types.VIDEO, types.ALGORITHM],
+        link: "https://www.coursera.org/learn/algorithms-part1/home/welcome"
+    },
+    {
+        title: "Algorithms, Part II",
+        description: "The continuation of the course, \"Algorithms, Part I\".",
+        image: video,
+        tags: [types.VIDEO, types.ALGORITHM],
+        link: "https://www.coursera.org/learn/algorithms-part2/home/welcome"
     }
 ]
 
