@@ -73,7 +73,7 @@ const data = [
     },
     {
         title: "React - The Complete Guide (incl Hooks, React Router, Redux)",
-        description: "A React which convers various aspects of React. Very good place to start learning React, though knowledge in HTML, CSS, and Javascript is assumed in the videos.",
+        description: "A Udemy course which covers various aspects of React. Very good place to start learning React, though knowledge in HTML, CSS, and Javascript is assumed in the videos.",
         image: video,
         tags: [types.VIDEO, types.REACTJS, types.JAVASCRIPT],
         link: "https://www.udemy.com/course/react-the-complete-guide-incl-redux/"
