@@ -280,6 +280,13 @@ const data = [
         image: leetcode,
         tags: [types.LEETCODE, types.ALGORITHM],
         link: "https://leetcode.com/problems/get-equal-substrings-within-budget/"
+    },
+    {
+    	title: "MDN web docs",
+    	description: "Very helpful site with detailed documentations for JavaScript.",
+    	image: site,
+    	tags: [types.SITE, types.JAVASCRIPT],
+    	link: "https://developer.mozilla.org/en-US/"
     }
 ]
 
