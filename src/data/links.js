@@ -287,6 +287,20 @@ const data = [
     	image: site,
     	tags: [types.SITE, types.JAVASCRIPT],
     	link: "https://developer.mozilla.org/en-US/"
+    },
+    {
+    	title: "Algorithms Course - Graph Theory Tutorial",
+    	description: "Video covering various graph theory algorithms and problems which could be solved using these algorithms.",
+    	image: video,
+    	tags: [types.VIDEO, types.ALGORITHM],
+    	link: "https://www.youtube.com/watch?v=09_LlHjoEiY&t=33s"
+    },
+    {
+    	title: "Koko Eating Bananas",
+    	description: "Interesting question which allows you to practice converting the problem to a binary search problem.",
+    	image: leetcode,
+    	tags: [types.LEETCODE, types.ALGORITHM],
+    	link: "https://leetcode.com/problems/koko-eating-bananas/"
     }
 ]
 
