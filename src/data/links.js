@@ -301,6 +301,13 @@ const data = [
     	image: leetcode,
     	tags: [types.LEETCODE, types.ALGORITHM],
     	link: "https://leetcode.com/problems/koko-eating-bananas/"
+    },
+    {
+    	title: "Deque in Python",
+    	description: "Demonstrates the usage of Python's Deque module.",
+    	image: article,
+    	tags: [types.ARTICLE, types.PYTHON]
+    	link: "https://www.geeksforgeeks.org/deque-in-python/"
     }
 ]
 
