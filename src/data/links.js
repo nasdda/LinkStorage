@@ -308,6 +308,13 @@ const data = [
     	image: article,
     	tags: [types.ARTICLE, types.PYTHON],
     	link: "https://www.geeksforgeeks.org/deque-in-python/"
+    },
+    {
+        title: "0/1 Knapsack problem | Dynamic Programming",
+        description: "Provides a detailed explaintion of what is the 0/1 Knapsack problem and how to solve it by using dynmaic programming. Has great visual demonstrations which makes the learning process much easier.",
+        image: video,
+        tags: [types.VIDEO, types.ALGORITHM],
+        link: "https://www.youtube.com/watch?v=cJ21moQpofY"
     }
 ]
 
