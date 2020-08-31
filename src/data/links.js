@@ -315,6 +315,13 @@ const data = [
         image: video,
         tags: [types.VIDEO, types.ALGORITHM],
         link: "https://www.youtube.com/watch?v=cJ21moQpofY"
+    },
+    {
+    	title: "Longest Increasing Subsequence",
+    	description: "Clearly worded problem which could be solved through a clever use of binary search and dynamic programming.",
+    	image: leetcode,
+    	tags: [types.LEETCODE, types.ALGORITHM],
+    	link: "https://leetcode.com/problems/longest-increasing-subsequence/"
     }
 ]
 
