@@ -11,8 +11,8 @@ import { NavLink } from "react-router-dom";
 import "./navbar.css";
 
 
-currLoc = window.location.href
-currLoc = currLoc.substr(currLoc.length - 5)
+const currLoc = window.location.href.substr(window.location.href.length - 5)
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
