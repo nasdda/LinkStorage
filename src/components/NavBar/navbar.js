@@ -10,7 +10,7 @@ import Tab from "@material-ui/core/Tab";
 import { NavLink } from "react-router-dom";
 import "./navbar.css";
 
-const homeURL = "http://localhost:3000/"
+const homeURL = "https://link-storage.vercel.app/"
 
 const useStyles = makeStyles((theme) => ({
   root: {
