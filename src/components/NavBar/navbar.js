@@ -12,6 +12,8 @@ import "./navbar.css";
 
 const homeURL = "https://link-storage.vercel.app/"
 
+console.log(window.location.href === homeURL)
+
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -33,7 +35,7 @@ const theme = createMuiTheme({
 
 function NavBar() {
   const classes = useStyles();
-  const [value, setValue] = React.useState(window.location.href === homeURL ? 0 : 1);
+  const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
