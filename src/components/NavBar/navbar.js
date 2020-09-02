@@ -8,8 +8,9 @@ import AppBar from "@material-ui/core/AppBar";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import { NavLink } from "react-router-dom";
-
 import "./navbar.css";
+
+const homeURL = "http://localhost:3000/"
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -32,7 +33,7 @@ const theme = createMuiTheme({
 
 function NavBar() {
   const classes = useStyles();
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = React.useState(window.location.href === homeURL ? 0 : 1);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
