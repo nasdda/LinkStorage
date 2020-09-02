@@ -54,6 +54,7 @@ function Home(props) {
         <Button type="submit" component="button">Search</Button>
       </form>
       <TagSelector />
+      <NavButtons />
       <LinkCards />
       <NavButtons />
     </div>
