@@ -10,9 +10,9 @@ import Tab from "@material-ui/core/Tab";
 import { NavLink } from "react-router-dom";
 import "./navbar.css";
 
-const homeURL = "https://link-storage.vercel.app/"
 
-console.log(window.location.href === homeURL)
+currLoc = window.location.href
+currLoc = currLoc.substr(currLoc.length - 5)
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -35,7 +35,7 @@ const theme = createMuiTheme({
 
 function NavBar() {
   const classes = useStyles();
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = React.useState(currLoc === "about" ? 1 : 0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
