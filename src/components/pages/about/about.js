@@ -24,7 +24,7 @@ function About(props) {
           <br />
           *Note*
           <br />
-          You can filter links either by searching for keywords or by selecting to include specific tags.
+          You can filter links either by searching for title or by selecting to include specific tags.
         </h2>
       </div>
     </div>
