@@ -322,6 +322,13 @@ const data = [
     	image: leetcode,
     	tags: [types.LEETCODE, types.ALGORITHM],
     	link: "https://leetcode.com/problems/longest-increasing-subsequence/"
+    },
+    {
+        title: "7 Database Paradigms",
+        description: "Very intuitive video discussing the various types of databases and what's their best use case.",
+        image: video,
+        tags: [types.VIDEO, types.DATABASE],
+        link: "https://www.youtube.com/watch?v=W2Z7fbCLSTw/"
     }
 ]
 
