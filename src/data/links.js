@@ -329,6 +329,13 @@ const data = [
         image: video,
         tags: [types.VIDEO, types.DATABASE],
         link: "https://www.youtube.com/watch?v=W2Z7fbCLSTw/"
+    },
+    {
+    	title: "Interval List Intersections",
+    	description: "Very good problem involving intervals which requires detailed analysis of the overlapping condition in order to solve efficiently.",
+    	image: leetcode,
+    	tags: [types.LEETCODE, types.ALGORITHM],
+    	link: "https://leetcode.com/problems/interval-list-intersections/"
     }
 ]
 
