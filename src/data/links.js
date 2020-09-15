@@ -336,6 +336,13 @@ const data = [
     	image: leetcode,
     	tags: [types.LEETCODE, types.ALGORITHM],
     	link: "https://leetcode.com/problems/interval-list-intersections/"
+    }, 
+    {
+        title: "Majority Voting Algorithm",
+        description: "Goes over the purpose of the Boyer-Moore Algorithm and why is the algorithm efficient. Great algorithm if you want to find some amount of most frequently occuring element in an unsorted list in linear time and without using extra space.",
+        image: article,
+        tags: [types.ARTICLE, types.ALGORITHM],
+        link: "https://gregable.com/2013/10/majority-vote-algorithm-find-majority.html"
     }
 ]
 
