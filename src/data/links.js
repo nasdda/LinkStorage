@@ -343,6 +343,13 @@ const data = [
         image: article,
         tags: [types.ARTICLE, types.ALGORITHM],
         link: "https://gregable.com/2013/10/majority-vote-algorithm-find-majority.html"
+    },
+    {
+        title: "Prim's algorithm in 2 minutes",
+        description: "A video which quickly yet sufficiently demonstrates how Prim's algorithm works to find a MST.",
+        image: video,
+        tags: [types.VIDEO, types.ALGORITHM],
+        link: "https://www.youtube.com/watch?v=cplfcGZmX7I"
     }
 ]
 
