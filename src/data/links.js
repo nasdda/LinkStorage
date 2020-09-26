@@ -251,7 +251,7 @@ const data = [
         description: "Various applications and implementations of the union-find algorithm. Highly recommended to attempt the leetcode problem \"Smallest String With Swaps\" to practice after finishing.",
         image: article,
         tags: [types.ARTICLE, types.ALGORITHM],
-        link: "https://www.cs.princeton.edu/~rs/AlgsDS07/01UnionFind.pdf/"
+        link: "https://www.cs.princeton.edu/~rs/AlgsDS07/01UnionFind.pdf"
     },
     {
         title: "Smallest String With Swaps",
@@ -350,6 +350,12 @@ const data = [
         image: video,
         tags: [types.VIDEO, types.ALGORITHM],
         link: "https://www.youtube.com/watch?v=cplfcGZmX7I"
+    }, {
+        title: "CSES",
+        description: "A site containing collections of competitive programming practice problems.",
+        image: site,
+        tags: [types.SITE, types.ALGORITHM],
+        link: "https://cses.fi/problemset/"
     }
 ]
 
