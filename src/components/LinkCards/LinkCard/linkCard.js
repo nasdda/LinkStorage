@@ -104,7 +104,7 @@ function LinkCard(props) {
                     </IconButton>
                 </Tooltip>
             </CardActions>
-            <Collapse in={expand} timeout="auto" unmountOnExit>
+            <Collapse in={expand} timeout="0" unmountOnExit>
                 <Typography variant="body1" component="p" style={{ margin: "10px" }}>
                     {props.description}
                 </Typography>

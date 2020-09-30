@@ -118,7 +118,7 @@ const data = [
         description: "A C++ documentation site which contains detailed explaination and various use cases for C++ features.",
         image: site,
         tags: [types.CPP, types.SITE],
-        link: "https://en.cppreference.com/w/cpp/language/expressions"
+        link: "https://en.cppreference.com/w/"
     },
     {
         title: "mongoDB",
@@ -356,6 +356,13 @@ const data = [
         image: site,
         tags: [types.SITE, types.ALGORITHM],
         link: "https://cses.fi/problemset/"
+    },
+    {
+    	title: "Recursive Approach to Segment Trees",
+    	description: "Article going over the segment tree data structure and its implementations.",
+    	image: article,
+    	tags: [types.ARTICLE, types.ALGORITHM],
+    	link: "https://leetcode.com/articles/a-recursive-approach-to-segment-trees-range-sum-queries-lazy-propagation/"
     }
 ]
 
