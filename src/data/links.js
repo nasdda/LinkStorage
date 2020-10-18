@@ -363,6 +363,13 @@ const data = [
     	image: article,
     	tags: [types.ARTICLE, types.ALGORITHM],
     	link: "https://leetcode.com/articles/a-recursive-approach-to-segment-trees-range-sum-queries-lazy-propagation/"
+    },
+    {
+        title: "Best Time to Buy and Sell Stock IV",
+        description: "A good problem to practice both dynamic programming and modifying prefix sum algorithms.",
+        image: leetcode,
+        tags: [types.LEETCODE, types.ALGORITHM],
+        link: "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/"
     }
 ]
 
