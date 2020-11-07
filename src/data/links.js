@@ -370,6 +370,13 @@ const data = [
         image: leetcode,
         tags: [types.LEETCODE, types.ALGORITHM],
         link: "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/"
+    },
+    {
+        title: "fireship.io",
+        description: "Beautiful site containing video lectures on various web and mobile technologies such as React, Angular, Flutter, Firebase, etc.",
+        image: site,
+        tags: [types.SITE, types.REACTJS, types.NODEJS],
+        link: "https://fireship.io/"
     }
 ]
 
