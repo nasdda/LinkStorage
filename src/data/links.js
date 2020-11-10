@@ -387,7 +387,7 @@ const data = [
     },
     {
         title: "AVL Tree Visualizer",
-        description: "Allows you to easily visualize the structure of an AVL tree during insertion or deletion, and how the auto balance goes about.",
+        description: "Allows you to easily visualize the structure of an AVL tree during insertion or deletion, and how the height-balancing goes about.",
         image: tool,
         tags: [types.TOOL, types.ALGORITHM],
         link: "https://www.cs.usfca.edu/~galles/visualization/AVLtree.html"
