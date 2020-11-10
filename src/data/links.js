@@ -377,6 +377,20 @@ const data = [
         image: site,
         tags: [types.SITE, types.REACTJS, types.NODEJS],
         link: "https://fireship.io/"
+    },
+    {
+    	title: "Semantic-UI",
+    	description: "A React UI library which contains a variety of components that you could use in your React site.",
+    	image: site,
+    	tags: [types.SITE, types.REACTJS],
+    	link: "https://react.semantic-ui.com/"
+    },
+    {
+        title: "AVL Tree Visualizer",
+        description: "Allows you to easily visualize the structure of an AVL tree during insertion or deletion, and how the auto balance goes about.",
+        image: tool,
+        tags: [types.TOOL, types.ALGORITHM],
+        link: "https://www.cs.usfca.edu/~galles/visualization/AVLtree.html"
     }
 ]
 
