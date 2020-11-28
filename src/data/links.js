@@ -391,6 +391,13 @@ const data = [
         image: tool,
         tags: [types.TOOL, types.ALGORITHM],
         link: "https://www.cs.usfca.edu/~galles/visualization/AVLtree.html"
+    },
+    {
+        title: "Binary Tree Visualizer",
+        description: "Allows you to visualize binary tree algorithms/data structures, including that of binary heaps and binary search trees.",
+        image: tool,
+        tags: [types.TOOL, types.ALGORITHM],
+        link: "http://btv.melezinek.cz/home.html"
     }
 ]
 
