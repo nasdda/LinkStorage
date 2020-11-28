@@ -19,7 +19,7 @@ function TagSelector(props) {
 
     return (
         <React.Fragment>
-            <p style={{ fontSize: "14px", fontWeight: "bold" }}>Include tags:</p>
+            <p style={{ fontSize: "18px", fontWeight: "bold" }}>Include tags:</p>
             <div className="tag-selector">
                 {renderedTags}
             </div>
