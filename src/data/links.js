@@ -398,6 +398,13 @@ const data = [
         image: tool,
         tags: [types.TOOL, types.ALGORITHM],
         link: "http://btv.melezinek.cz/home.html"
+    },
+    {
+    	title: "Dynamic Programming - Learn to Solve Algorithmic Problems & Coding Challenges",
+    	description: "Five hour long video going over dynamic programming paradigms and solving various problems via dynamic programming. Clearly explained and is completely free with no ads.",
+    	image: video,
+    	tags: [types.VIDEO, types.ALGORITHM],
+    	link: "https://www.youtube.com/watch?v=oBt53YbR9Kk"
     }
 ]
 
