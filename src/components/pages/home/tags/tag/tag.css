@@ -20,7 +20,7 @@
 .toggled {
   filter: brightness(120%);
   transform: scale(1.2);
-  margin: -0.2rem 0.6rem 0.6rem 0.6rem;
+  margin: -0.2rem 0.8rem 0.8rem 0.8rem;
   border-width: 0.15rem;
   border-style: solid;
   border-color: black;
