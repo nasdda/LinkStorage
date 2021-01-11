@@ -19,7 +19,7 @@ function TagSelector(props) {
 
     return (
         <React.Fragment>
-            <p style={{ fontSize: "18px", fontWeight: "bold" }}>By tags:</p>
+            <p style={{ fontSize: "1.2rem", fontWeight: "bold" }}>By tags:</p>
             <div className="tag-selector">
                 {renderedTags}
             </div>
