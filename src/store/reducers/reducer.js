@@ -72,8 +72,16 @@ const tagToggled = (state, action) => {
     } else {
         newToggledTags.add(action.tagType)
     }
-
-    const newLinks = (newToggledTags.size !== 0) ? links.filter(link => link.tags.some(t => newToggledTags.has(t))) : [...links]
+    const tagsCount = newToggledTags.size
+    const newLinks = links.filter(link => {
+        let matchingTags = 0
+        link.tags.forEach(t => {
+            if(newToggledTags.has(t)){
+                matchingTags++
+            }
+        })
+        return matchingTags === tagsCount
+    }) 
     return {
         ...state,
         toggledTags: newToggledTags,
@@ -82,7 +90,6 @@ const tagToggled = (state, action) => {
         page: 1
     }
 }
-
 
 const nextPage = (state, action) => {
     const temp = Object.keys(state.links).length / LINKS_PER_PAGE
